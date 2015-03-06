@@ -1,15 +1,18 @@
 ---
 
 layout: post
-title: "SnS - the Word Sense Induction method"
+title: "SnS - Word Sense Induction method"
 description: "The description of novel Word Sense Induction Method called SnS"
 category: [NLP]
 tags: [NLP, Text Mining]
 
 ---
 
-In the paper [1] there was proposed the method called SenseSearcher (SnS). It is a word sense induction algorithm based on closed frequent sets and multi-level sense representation. SnS is a knowledge-poor approach, which means it does not need any kind of structured knowledge base about senses as well as the algorithms that have embedded deep language knowledge. Senses induced by SnS characterize better readability (are more intuitive), mainly because SnS
-discovers a hierarchy of senses showing important relationships between them. In other words the proposed method creates structure of senses, where coarse-grained senses contain related sub-senses (fine-grained senses), rather than  at list of concepts.
+In the paper [1] method called SenseSearcher (SnS) has been proposed. It is a word sense induction algorithm based on closed frequent sets and multi-level sense representation. SnS is a knowledge-poor approach, which means it does not need any kind of structured knowledge base about senses as well as the algorithms that have embedded deep language knowledge.
+
+<!--more-->
+
+Senses induced by SnS are characterized by better readability (are more intuitive), mainly because SnS discovers a hierarchy of senses showing important relationships between them. In other words the proposed method creates structure of senses, where coarse-grained senses contain related sub-senses (fine-grained senses), rather than  at list of concepts.
 
 The SnS algorithm consists of five phases (one prephase and four proper phases), which we present below. The pseudocode of the whole algorithm is presented in [1]. Prephase is performed once per corpora and is devoted to building an inverted index for the corpus. Usually we use unstructured raw corpus split into paragraphs. Each paragraph is seen as a "document" persisted in the index.
 

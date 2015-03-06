@@ -7,10 +7,12 @@ category: [NLP]
 tags: [NLP, Text Mining]
 
 ---
-The goal of text clustering in information retrieval is to discover groups of semantically related documents. Contextual descriptions (snippets) of documents
-returned by a search engine are short, often incomplete, and highly biased toward the query, so establishing a notion of proximity between documents is a
-challenging task that is called Search Result Clustering (SRC). The general 
-flow of search result clustering can be described in three main steps [1]:
+
+The goal of text clustering in information retrieval is to discover groups of semantically related documents. Contextual descriptions (snippets) of documents returned by a search engine are short, often incomplete, and highly biased toward the query, so establishing a notion of proximity between documents is a challenging task that is called Search Result Clustering (SRC). 
+
+<!--more-->
+
+The general flow of search result clustering can be described in three main steps [1]:
 
 1. Given a query q, a search engine is used to retrieve a list of results (snippets)
 R = (\\(r_1,\ldots,r_n\\));

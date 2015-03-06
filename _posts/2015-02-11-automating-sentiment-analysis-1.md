@@ -1,17 +1,14 @@
 ---
 layout: post
-title: "Automating sentiment analysis - part 1"
+title: "Automating sentiment analysis"
 description: "This is first post of the three part series about Automating Sentiment Analysis. In this post we will focus on gathering sentiment annotated data from Twitter and tools used for this purpose."
 category: [Sentiment Analysis]
 tags: [Twitter, Tweepy, Python, Sentiment Analysis]
 ---
 
+This is first post of the three part series about Automating Sentiment Analysis. In this post we will focus on gathering sentiment annotated data from Twitter and tools used for this purpose.
 
-
-Scrapping data from web - Twitter and sentiment
------------
-
->This is first post of the three part series about Automating Sentiment Analysis. In this post we will focus on gathering sentiment annotated data from Twitter and tools used for this purpose.
+<!--more-->
 
 Gathering sentiment annotated data can be done in two ways - maunal sentiment annotation by volunteers or using simple, universal automatic annotation. As first option is very time consuming and requires actual human input, second option is more useful for automated systems. Automated sentiment annotation is often based on detecting emoticons, which are universal to the language and are often used in right emtional context. One of the sources for such annotated data is Twitter, which provides two filters: ":)" for searching for messages with positive sentiment, and ":(" for searching for messages with negative sentiment. In addition to that, Twitter allows message filtering by language (using "lang:" filter), which is also useful for filtering data only in Polish language.
 

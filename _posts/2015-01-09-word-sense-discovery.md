@@ -8,9 +8,11 @@ tags: [NLP, Text Mining]
 
 ---
 
-The exponential growth of the Internet community brought to the production of a vast amount
-of unstructured data, such as web pages, blogs, social media etc. Such mass of information
-is unlikely to be analyzed by humans, so there is a strong drive to develope automatic methods capable to retrieve knowledge from the Web. Traditional techniques for text mining show theirs limit when they are applied to such huge collections of data. Most of currently used approaches are based on lexico-syntactic analysis of text, and they are mainly focused on words occurrences. Two main flaws of the approach are: inability to identify documents using different wordings, lack of context-awareness, which leads to retrieval documents which are not pertinent to the user needs. Text disambiguation can potentially provide new opening for web search engines, contributing in the realization of the Semantic Web.
+The exponential growth of the Internet community brought to the production of a vast amount of unstructured data, such as web pages, blogs, social media etc. Such mass of information is unlikely to be analyzed by humans, so there is a strong drive to develope automatic methods capable to retrieve knowledge from the Web. 
+
+<!--more-->
+
+Traditional techniques for text mining show theirs limit when they are applied to such huge collections of data. Most of currently used approaches are based on lexico-syntactic analysis of text, and they are mainly focused on words occurrences. Two main flaws of the approach are: inability to identify documents using different wordings, lack of context-awareness, which leads to retrieval documents which are not pertinent to the user needs. Text disambiguation can potentially provide new opening for web search engines, contributing in the realization of the Semantic Web.
 
 In modern text mining and information retrieval, knowing the exact meaning of a word in a query becomes an important issue. Knowledge of an actual meaning of a polysemous word can significantly improve the quality of the information retrieval process by means of retrieving more relevant documents or extracting relevant information from texts. The importance of polysemy problem becomes much clearer when we look at the statistics for the English language. As stated in [1] about 73% of words in common
 English are polysemous, the average number of senses per word for all words found in English

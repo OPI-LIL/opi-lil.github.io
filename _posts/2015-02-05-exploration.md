@@ -8,11 +8,11 @@ tags: [NLP, Text Mining]
 
 ---
 
-In the previous post (SnS - the Word Sense Induction method), we have proposed the method called SenseSearcher (SnS). It is a word sense induction algorithm based on closed frequent sets and multi-level sense representation. SnS is a knowledge-poor approach, which means it does not need any kind of structured knowledge base about senses as well as the algorithms that have embedded deep language knowledge.
+In the previous post (SnS - Word Sense Induction method), we have proposed the method called SenseSearcher (SnS). It is a word sense induction algorithm based on closed frequent sets and multi-level sense representation. SnS is a knowledge-poor approach, which means it does not need any kind of structured knowledge base about senses as well as the algorithms that have embedded deep language knowledge.
 
-This post presents senses discovered by SnS from five hundred Wikipedia paragraphs for
-terms T={*apple, bass, plant, mouse, virus, bear, block, bow, cat, jaguar, nadirg*}. 
-The figures show print screens of SnS tool identifying representative senses for the terms from T.
+<!--more-->
+
+This post presents senses discovered by SnS from five hundred Wikipedia paragraphs for terms T={*apple, bass, plant, mouse, virus, bear, block, bow, cat, jaguar, nadirg*}. The figures show print screens of SnS tool identifying representative senses for the terms from T.
 
 Figure 1 presents senses for the term **apple** S = {*computer, music, country, fruit,
 golden apple, film, book*}, where *computer* refers to Apple Inc. products, *music* to albums and bands, *country* to geographical names, *fruit* to a fruit of a tree, *golden apple* to a story element in ancient mythologies and *film, book* are related to movies and literature titled with word apple.

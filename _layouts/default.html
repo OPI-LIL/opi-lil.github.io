@@ -1,6 +1,16 @@
----
-theme :
-  name : bootstrap-3
----
-{% include JB/setup %}
-{% include themes/bootstrap-3/default.html %}
+<!DOCTYPE html>
+<html class="no-js">
+  <!-- mathjax config similar to math.stackexchange -->
+  {% include head.html %}
+
+  <body>
+    {% include header.html %}
+
+    <div class="content">
+      {{ content }}
+    </div>
+
+    {% include footer.html %}
+  </body>
+  
+</html>
