@@ -21,7 +21,8 @@
 
 .post > .more {
   margin: 10px 0;
-  text-align: left; }
+  text-align: justify; }
+  
 
 /* post-full*/
 .post-full .date {
