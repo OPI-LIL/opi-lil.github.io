@@ -12,7 +12,7 @@ theme:
   
   # Header and footer text
   header_text: >
-     <h1>Natural Language Processing Laboratory</h1>
+     <h3>Natural Language Processing Laboratory</h3>
      <h4> Cutting edge NLP research </h4>
           
   footer_text: >
