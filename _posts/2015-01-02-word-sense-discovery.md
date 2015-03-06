@@ -1,7 +1,13 @@
+---
+layout: post
+title: "Word Sense Discovery"
+description: "Short no-nonsense introduction to word sense discovery"
+category: [NLP]
+tags: [NLP, Text Mining]
+---
+
 # Word Sense Discovery
-
-
-----------
+---
 
 In modern text mining and information retrieval, knowing the exact meaning of a word in a query becomes an important issue. Knowledge of an actual meaning of a polysemous word can significantly improve the quality of the information retrieval process by means of retrieving more relevant documents or extracting relevant information from texts. The importance of polysemy problem becomes much clearer when we look at the statistics for the English language. As stated in [1] about 73% of words in common
 English are polysemous, the average number of senses per word for all words found in English
