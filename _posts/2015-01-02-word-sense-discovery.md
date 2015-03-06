@@ -1,10 +1,16 @@
 ---
+
 layout: post
 title: "Word Sense Discovery"
-description: "Short no-nonsense introduction to word sense discovery"
+description: "Short introduction to word sense discovery"
 category: [NLP]
 tags: [NLP, Text Mining]
+
 ---
+
+The exponential growth of the Internet community brought to the production of a vast amount
+of unstructured data, such as web pages, blogs, social media etc. Such mass of information
+is unlikely to be analyzed by humans, so there is a strong drive to develope automatic methods capable to retrieve knowledge from the Web. Traditional techniques for text mining show theirs limit when they are applied to such huge collections of data. Most of currently used approaches are based on lexico-syntactic analysis of text, and they are mainly focused on words occurrences. Two main flaws of the approach are: inability to identify documents using different wordings, lack of context-awareness, which leads to retrieval documents which are not pertinent to the user needs. Text disambiguation can potentially provide new opening for web search engines, contributing in the realization of the Semantic Web.
 
 In modern text mining and information retrieval, knowing the exact meaning of a word in a query becomes an important issue. Knowledge of an actual meaning of a polysemous word can significantly improve the quality of the information retrieval process by means of retrieving more relevant documents or extracting relevant information from texts. The importance of polysemy problem becomes much clearer when we look at the statistics for the English language. As stated in [1] about 73% of words in common
 English are polysemous, the average number of senses per word for all words found in English
@@ -23,10 +29,6 @@ It is worth-noting that since the very first works on artificial intelligence th
 
 The above mentioned problem is called the knowledge acquisition bottleneck. Clearly,
 because of the scale of language processing algorithms, the supervised machine learning algorithms, well-known in AI, can not be effectively applied in solving language-related problems. Unsupervised methods seem to be the only chance to overcome the knowledge acquisition bottleneck. There are some research showing that some unsupervised methods are able to induce word senses from input text by clustering word occurrences, and then classify new instances into the induced clusters. The research on those methods is commonly known as *Word Sense Induction* area (WSI). It is a subproblem strictly related to Word Sense Disambiguation Task, aiming at building inventory of senses either for terms in ontologies, thesauri or dictionaries. More specifically, WSI is the task of automatic identification senses from textual repositories, without using handcrafted resources or manually annotated data. Summarizing, *Word Sense Induction* (WSI) can be perceived as a clustering problem, where words are grouped into non-disjoint clusters according to their meanings. Each cluster can be considered a separate sense of the word. 
-
-
-----------
-
 
 **References**
 
