@@ -118,6 +118,7 @@ public void buildSentimentDictionary() {
 
     System.out.println(String.format("Building sentiment dictionary..."));
     System.out.print(String.format("Analyzing words..."));
+    
     for (String name : sentimentWordDatabase.keySet()) {
         Double freq_w_pos = 0.0001D;
         Double freq_w_neg = 0.0001D;
@@ -130,11 +131,13 @@ public void buildSentimentDictionary() {
         if (freq_pos == 0D) freq_pos = 1D;
         Double freq_neg = Double.valueOf(negativeWordDatabase.size());
         if (freq_neg == 0D) freq_neg = 1D;
-        Double sentimentScore = Math.log(freq_w_pos * freq_neg / (freq_w_neg * freq_pos)) / Math.log(2);
+        
+        Double sentimentScore =
+          Math.log(freq_w_pos * freq_neg / (freq_w_neg * freq_pos)) / Math.log(2);
+        
         sentimentMap.put(name, sentimentScore);
     }
     System.out.println("done.");
-...
 }
 ```
 
