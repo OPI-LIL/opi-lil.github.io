@@ -143,6 +143,7 @@ This code takes into account fact that the stem may not appear in both collectio
 ####Wrapping it up in code
 
 After looking at how the process work, we can write simple tool for automated dictionary generation. Below is show a simple code of such tool. Full sample project will be available on BitBucket soon.
+
 ```java
 Map<String,Boolean> dictionaryFiles = new HashMap<>();
 dictionaryFiles.put("positive.json",true);
