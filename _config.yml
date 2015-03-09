@@ -1,6 +1,6 @@
 # SITE CONFIGURATION
 baseurl: "" # the subpath of your site, e.g. /blog/
-url: "http://1o0ko.github.io" # the base hostname & protocol for your site
+url: "http://opi-lil.github.io" # the base hostname & protocol for your site
 
 # THEME-SPECIFIC CONFIGURATION
 theme:
@@ -13,7 +13,7 @@ theme:
   # Header and footer text
   header_text: >
      <h3>Natural Language Processing Laboratory</h3>
-     <h5> Cutting edge NLP research </h5>
+     <h4> Cutting edge NLP research </h4>
           
   footer_text: >
    Powered by <a href="http://jekyllrb.com">Jekyll</a> with <a href="https://rohanchandra.github.io/project/type/">Type Theme</a>
