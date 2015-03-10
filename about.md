@@ -9,5 +9,5 @@ Natural Language Processing Laboratory fulfills assignments connected with natur
 
 The part of conducted work is also connected with multicriterial optimization problems using genetic algorithms. 
 
-Head over to [tags]({{site.url}}/tags/) for much more information about out work.
+Head over to [tags]({{site.url}}/tags/) for much more information about our work.
 
