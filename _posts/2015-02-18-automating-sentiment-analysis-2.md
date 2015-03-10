@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "Automating sentiment analysis<br> part 2"
+title: "Automating sentiment analysis 2"
 description: "This is second post in four post series about Automating Sentiment Analysis. In this part we discuss automating building sentiment dictionary."
 category: [Sentiment Analysis]
 tags: [Twitter, Java, Morfologik, Sentiment Analysis]

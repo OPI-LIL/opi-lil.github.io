@@ -1,7 +1,7 @@
 ---
 layout: post
-title: "Automating sentiment analysis<br> part 1"
-description: "This is first post of the three part series about Automating Sentiment Analysis. In this post we will focus on gathering sentiment annotated data from Twitter and tools used for this purpose."
+title: "Automating sentiment analysis 1"
+description: "This is first post of the four part series about Automating Sentiment Analysis. In this post we will focus on gathering sentiment annotated data from Twitter and tools used for this purpose."
 category: [Sentiment Analysis]
 tags: [Twitter, Tweepy, Python, Sentiment Analysis]
 ---
