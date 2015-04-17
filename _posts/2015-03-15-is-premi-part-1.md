@@ -13,7 +13,7 @@ The conference is held every two years to make it an ideal platform for people t
 
 The industrial session of the PREMI2015 is devoted to Machine Intelligence and Big Data in the Industry. The goal of this session is to create a space for exchange of ideas between the leading researchers and industry practitioners. Presented work should be innovative and at the same time target specific practical problems or business requirements. Therefore, we decided to publish there our research results from diverse fields of Computational Intelligence. Below, we briefly describe three of submitted papers. Next three papers will be the content of the next post.
 
-### Syntactic N-gram collection from a large-scale corpus of Internet Polish ###
+### Syntactic N-gram collection from a large-scale corpus of Polish websites ###
 
 The research is devoted to the processing of multi-Terabyte web archive. The aim of this work is to create N-gram collection based on a large-scale corpus of all Polish sites on the Internet provided by The Common Crawl Foundation project.  The data after morphological and syntactic processing is used to extract flat and syntactic n-grams compilations. Syntactic N-grams are designed to express syntactic structure more devotedly than linear N-grams. They have many successful applications in machine learning within natural language processing and are extensively studied.
 
