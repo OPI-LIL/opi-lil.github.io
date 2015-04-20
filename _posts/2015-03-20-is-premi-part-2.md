@@ -9,8 +9,6 @@ tags: [NLP, Text Mining]
 Next triple of publications submitted during the the International Conference on Pattern Recognition and Machine Intelligence, Warsaw, Poland, 2015, June 30 - July 3. Below, we briefly describe three of submitted papers referring to: machine translation, clustering semi-structured documents and semantic textual similarity.
 
 <!--more-->
-The primary goal of the conference is to present state-of-the-art scientific results, encourage academic and industrial interaction, and promote collaborative research activities in Pattern Recognition, Machine Intelligence and related fields, involving scientists, engineers, professionals, researchers and students.
-
 ### Statistical Machine Translation of the Legal Texts###
 
 Machine Translation is a branch of computer science that automatically handles translation of a text from a source language to a target language. This article summarizes the experience gained during UKSW project, part of which deals with translation of legal phrases between English and Polish. The article describes consecutive steps of the project, ie. collecting data and creating parallel, bilingual corpora, checking open source ready-made solutions and the novel, effective SMT solution that has been proposed. The final chapter summarizes the solution, together with the results based on BLEU metrics. 
