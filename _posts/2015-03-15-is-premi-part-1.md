@@ -17,9 +17,9 @@ The industrial session of the PREMI2015 is devoted to Machine Intelligence and B
 
 The research is devoted to the processing of multi-Terabyte web archive. The aim of this work is to create N-gram collection based on a large-scale corpus of all Polish sites on the Internet provided by The Common Crawl Foundation project.  The data after morphological and syntactic processing is used to extract flat and syntactic n-grams compilations. Syntactic N-grams are designed to express syntactic structure more devotedly than linear N-grams. They have many successful applications in machine learning within natural language processing and are extensively studied.
 
-### A comparative study on Music Genere Classification algorithms ###
+### A comparative study on Music Genre Classification Algorithms ###
 
-Music genre classification is one of the fundamental task in the field of Music Information Retrieval (MIR). In this research the performance of various music genre classification algorithms including Convolutional Deep Belief networks and Alternating Least Squares (ALS) is being compared. The study is based on the "Million Song Dataset", a freely-available collection of audio features and metadata (300GB of data) and associated musiXmatch dataset containing lyrical information. The emphasis is put not only on classification accuracy but also on robustness and scalability of algorithms.
+Music Genre Classification is one of the fundamental tasks in the field of Music Information Retrieval (MIR). In this paper the performance of various music genre classification algorithms including Random Forests, Multi-Class Support Vector Machines and Deep Belief Networks is being compared. The study is based on the "Million Song Dataset" a~freely-available collection of audio features and metadata. The emphasis is put not only on classification accuracy but also on robustness and scalability of algorithms.
 
 ### Sentiment analysis of short Polish texts ###
 
