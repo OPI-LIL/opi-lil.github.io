@@ -6,14 +6,18 @@ category: [Sentiment Analysis]
 tags: [Java, Machine Learning, Sentiment Analysis]
 ---
 
-This is final post in four post series about Automating Sentiment Analysis. In this part we discuss machine learning algorithms used to analyze text emotions.
+Text sentiment assessing algorithm
+-----------
+
+> This is final post in four post series about Automating Sentiment Analysis. In this part we discuss machine learning algorithms used to analyze text emotions.
 
 <!--more-->
 
-Having retrieved Sentiment Vectors for 30101 text that formed training dataset (see part 3 of series), of which 14053 were tagged as positive and 16048 as negative, we assessed 5 machine learning algorithms: NEAT and FeedForward Neural Networks, Support Vector Machines, Deep Belief Networks and Naive Bayes. 
+Having retrieved Sentiment Vectors for 30101 text that formed training dataset (see part 3 of series), of which 14053 were tagged as positive and 16048 as negative, we assessed 5 machine learning algorithms: NEAT and FeedForward neural networks, Support Vector Machines, Deep Belief Networks and Naive Bayes. 
+
 ####Algorithm implementation
-#####NEAT, FeedForward Neural Networks and Support Vector Machines
-NEAT, FeedForward Neural Networks and Support Vector Machines were implemented using Encog library. Using this library allowed us to easily implement those algorithms and switch between them in easy fashion, with added benefit of using tested and stable code, thus eliminating possible implementation induced bugs.
+#####NEAT, FeedForward neural networks and Support Vector Machines
+NEAT, FeedForward neural networks and Support Vector Machines were implemented using Encog library. Using this library allowed us to easily implement those algorithms and switch between them in easy fashion, with added benefit of using tested and stable code, thus eliminating possible implementation induced bugs.
 
 Below is part of the code responsible for 10-fold cross-validation for these algorithms:
 
@@ -48,16 +52,13 @@ data.normalize();
 model.holdBackValidation(0.1, true, 1001);
 model.selectTrainingType(data);
 machineLearningMethod = (MLRegression) model.crossvalidate(10, true);
-
 System.out.println(String.format("done"));
-System.out.println("\tTraining error: " + 
-    EncogUtility.calculateRegressionError(machineLearningMethod, model.getTrainingDataset()));
-System.out.println("\tValidation error: " + 
-    EncogUtility.calculateRegressionError(machineLearningMethod, model.getValidationDataset()));
+System.out.println("\tTraining error: " + EncogUtility.calculateRegressionError(machineLearningMethod, model.getTrainingDataset()));
+System.out.println("\tValidation error: " + EncogUtility.calculateRegressionError(machineLearningMethod, model.getValidationDataset()));
 ```
 
 #####Deep Belief Network
-Deep Belief Network was implemented using Deeplearning4J. Code for evaluation of DBN is shown below
+Deep Belief Network was implemented using Deeplearning4J. Same as with using Encog library, using Deeplearning4j    to easily implement DBM algorithm. Code for evaluation of DBN is shown below
 
 ```java
  DataSet completedData = new DataSet(data, Nd4j.create(outcomes));
@@ -70,16 +71,10 @@ RandomGenerator gen = new MersenneTwister(123);
    
 NeuralNetConfiguration conf = new NeuralNetConfiguration.Builder()
 	.iterations(100)
-	.weightInit(WeightInit.VI)
-    .dist(Distributions.normal(gen, 1e-3))
-    .constrainGradientToUnitNorm(false)
-	.lossFunction(LossFunctions.LossFunction.RECONSTRUCTION_CROSSENTROPY)
-    .activationFunction(Activations.tanh())
-	.rng(gen)
-    .visibleUnit(RBM.VisibleUnit.GAUSSIAN)
-    .hiddenUnit(RBM.HiddenUnit.RECTIFIED).dropOut(0.3f)
-	.learningRate(1e-3f)
-    .nIn(paremetersNum).nOut(2).build();
+	.weightInit(WeightInit.VI).dist(Distributions.normal(gen, 1e-3)).constrainGradientToUnitNorm(false)
+	.lossFunction(LossFunctions.LossFunction.RECONSTRUCTION_CROSSENTROPY).activationFunction(Activations.tanh())
+	.rng(gen).visibleUnit(RBM.VisibleUnit.GAUSSIAN).hiddenUnit(RBM.HiddenUnit.RECTIFIED).dropOut(0.3f)
+	.learningRate(1e-3f).nIn(paremetersNum).nOut(2).build();
 
 DBN dbn = new DBN.Builder()
 	.configure(conf)
@@ -93,9 +88,8 @@ dbn.fit(teachDataset);
 Evaluation eval = new Evaluation();
 INDArray output = dbn.output(testDataset.getFeatureMatrix());
 eval.eval(testDataset.getLabels(), output);
-
 if (programOptions.isTrain()) {
-    System.out.println(String.format("Score %s", eval.stats()));
+System.out.println(String.format("Score %s", eval.stats()));
 }
 ```
 
@@ -113,15 +107,7 @@ trainingSet.addAll(dataset.subList(validateEnd,dataset.size()-1));
 for (Pair<String,String> lineValue : trainingSet) {
     negation = false;
     List<String> tokens = new ArrayList<String>();
-    Sting[] words = lineValue.getKey()
-                            .replace(";", " ")
-                            .replace("-", " ")
-                            .replace(":", " ")
-                            .replace("'", "")
-                            .replace("\"", "")
-                            .split("[\\?\\!\\.\\s\\,]+")
-    
-    for (String word : words)
+    for (String word : lineValue.getKey().replace(";", " ").replace("-", " ").replace(":", " ").replace("'", "").replace("\"", "").split("[\\?\\!\\.\\s\\,]+"))
         if (getStemmedWord(word) != null) {
             if (word.equals("nie")) negation = true;
             else {
@@ -171,4 +157,4 @@ Below are results for 10-fold cross validation for each tested algorithm.
 | FeedForwad  | 0,5      |
 | SVM         | 0,81     |
 
-We found that NEAT neural network provided best results, with SVM at second place. Drawback of these two methos is long training time, but this can be saving trained model for future use.
+We found that NEAT neural network provided best results, with SVM at second best results. Drawback of these two methos is long training time, but this can be saving trained model for future use.
