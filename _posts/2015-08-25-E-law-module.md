@@ -47,5 +47,7 @@ For each document the vector of legal article’s numbers is build. Such vector 
 
 ###References
 [1]: M. Zaki and Ch. Hsiao. 2002. CHARM: An efficient algorithm for closed itemset mining. Proceedings 2002 SIAM Int. Conf. Data Mining, pages 457–472. Arlington.
+
 [2]: P. Koehn. 2005. Europarl: A parallel corpus for statistical machine translation. MT Summit, pages 79–86.
+
 [3]: R. Navigli and S. Ponzetto. 2012. The Automatic Construction, Evaluation and Application of a Wide Coverage Multilingual Semantic Network. Artificial Intelligence, pages 217–250.
