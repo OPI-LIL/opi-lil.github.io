@@ -7,7 +7,7 @@ tags: [NLP, Text Mining]
 ---
 
 
-The idea of using lexical similarity is based on the assumption that some words exist in a similar form in the source and target languages. Actually, the similarities between languages are subject of intensive research by the linguists. McMahon [1] discusses how the languages belonging to the same family diverge, whereas Kranich et al [2] give an interesting example how the languages belonging to different families influence each other. It seems therefore to be straightforward to apply the similarities for building dictionaries not only for the languages belonging to the same family.
+The idea of using lexical similarity is based on the assumption that some words exist in a similar form in the source and target languages. Actually, the similarities between languages are subject of intensive research by the linguists. McMahon [1] discusses how the languages belonging to the same family diverge, whereas Kranich et al [2] give an interesting example how the languages belonging to different families influence each other. It seems therefore to be straightforward to apply the similarities for building dictionaries not only for the languages belonging to the same family. 
 
 <!--more--> 
 
