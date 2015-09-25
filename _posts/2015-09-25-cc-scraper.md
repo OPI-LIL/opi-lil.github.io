@@ -30,8 +30,17 @@ Scraper architecture consists of several components:
 
 Main Server &minus; it's a core of the system, on which scraper performs its tasks and language detection takes place. It is an abstract term since it is built up from a few computers stored in a rack and makes the environment for scraper existence. Currently, the computational resources available within the main server are: Intel(R) Xeon(R) CPU E5-2420 v2 @ 2.20GHz 16 cores and 384 GB RAM. However, the main server is expected to be enlarged significantly in the near future.
 
-Since the enormous data volume, scraping activities take place every day after working time in the Institute 
+Since the enormous data volume, scraping activities take place every day after working hours in the Institute ![smile]({{site.url }}/assets/images/smile.png) (After scraping actors are launched, the Internet connection quality is much reduced.) Crontab scripts take care about both firing scraping up and turning it down.
 
+Highly concurrent processing of Web Data Crawl goes on. As we have used actor based Akka Framework we got it out of the box.
+
+The main server is a habitat for Actors responsible for downloading and processing data, and for Polish language detection.
+
+Actors which are involved in processing:
+
+* ActorSystem which plays the role of application CEO 
+* Cassandra Storage
+* Common Crawl Storage Servers
 
 
 ![Scraper Architecture]({{ site.url }}/assets/images/scraper-architecture.png)
