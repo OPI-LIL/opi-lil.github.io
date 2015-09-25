@@ -23,7 +23,3 @@ As we would like to process the Common Crawl Web Data, we have to get this crawl
 
 ![Comments view]({{ site.url }}/assets/images/scraper-architecture.png)
 
-###References
-[1]: McMahon A. 1994. Understanding language change. Cambridge University Press.
-
-[2]: Kranich, Svenja, Viktor Becher, and Steffen Höder. 2011. A tentative typology of translation-induced language change. In: Multilingual Discourse Production: Diachronic and Synchronic. 
