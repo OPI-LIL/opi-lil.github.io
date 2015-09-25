@@ -46,7 +46,9 @@ It is the core of the scraping system which starts up the scraper, and release r
 
 This is the real manager who creates its workers, hires them, and gives them tasks to be done. (As it is very important function, let's call him as *Master*.) After *Master* has  received the message *StartDownloading* from the *ActorSystem*, he creates a proper number of his faithful slaves *FileWorkers*, gets the URLs (from wet.paths, file containing URLs for parts of data crawl segment) for feeding them by sending *ProcessFile* message, and in the end begins processing, which is about iterating over available *FileWorkers* and giving them a new task (URL). In the meanwhile, *FileMaster* is listening whether *ProcessingFinished* message occurred, if so *Master* deletes the downloaded file, pushes the info to database that a specific URL has been processed, and checks whether or not all processing is already done.
 
-* *FileWorker* is a worker responsible for data processing.
+* *FileWorker* is a worker responsible for data processing. This actor is called as *Slave* and is under supervision of his *Master*. There might be a lot of them. In our system we have 48 *Slaves*, what is equal to 3 times the number of CPU cores.
+
+*Slave* performs most of the job, but not all... After he has received *ProcessFile* message from his *Master*, the processing step is initialized. First, the file containing gzipped data is downloaded, and second he iterates over unzipped file stream containing Web Data Crawl, which is about 300 MB raw text, and fetches chunks of plaintext, with special care of headers, and send further to *Bouncer* actors for Polish language detection. Each chunk of text is sent to currently available *Bouncer* actor. After obtaining a response from *Bouncer*, *FileWorker* sends the message to his *Master* with a proper feedback (Failure or Success).
 
 
 ![Scraper Architecture]({{ site.url }}/assets/images/scraper-architecture.png)
