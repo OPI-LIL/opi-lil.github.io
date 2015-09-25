@@ -43,7 +43,10 @@ The main server is a habitat for Actors responsible for downloading and processi
 It is the core of the scraping system which starts up the scraper, and release resources at the end, by scraping system termination. Data base connection is established and *FileMaster* actor is created. After all, the *StartDownloading* message is sent to the *FileMaster* for further actions.
 
 * *FileMaster* actor is a kind of application's manager, who supervises the tasks of his workers. We can call him a master and its workers as slaves, with accordance to parallel computing nomenclature. 
-* Common Crawl Storage Servers
+
+This is the real manager who creates its workers, hires them, and gives them tasks to be done. (As it is very important function, let's call him as *Master*.) After *Master* has  received the message *StartDownloading* from the *ActorSystem*, he creates a proper number of his faithful slaves *FileWorkers*, gets the URLs (from wet.paths, file containing URLs for parts of data crawl segment) for feeding them by sending *ProcessFile* message, and in the end begins processing, which is about iterating over available *FileWorkers* and giving them a new task (URL). In the meanwhile, *FileMaster* is listening whether *ProcessingFinished* message occurred, if so *Master* deletes the downloaded file, pushes the info to database that a specific URL has been processed, and checks whether or not all processing is already done.
+
+* *FileWorker* is a worker responsible for data processing.
 
 
 ![Scraper Architecture]({{ site.url }}/assets/images/scraper-architecture.png)
