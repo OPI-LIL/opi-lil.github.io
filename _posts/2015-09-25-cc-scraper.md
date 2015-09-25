@@ -20,6 +20,19 @@ Web Data Crawl has being collected over 7 years, the project has evolved over th
 As we would like to process the Common Crawl Web Data, we have to get this crawl at first! Since we would like to skip using Amazon S3, we have to download the data by ourselves (and that's why we need a scraper).  
 
 ###Scraper Architecture 
+Scraper architecture consists of several components:
 
-![Comments view]({{ site.url }}/assets/images/scraper-architecture.png)
+* Main Server
+* Cassandra Storage
+* Common Crawl Storage Servers
+
+####Main Server
+
+Main Server &minus; it's a core of the system, on which scraper performs its tasks and language detection takes place. It is an abstract term since it is built up from a few computers stored in a rack and makes the environment for scraper existence. Currently, the computational resources available within the main server are: Intel(R) Xeon(R) CPU E5-2420 v2 @ 2.20GHz 16 cores and 384 GB RAM. However, the main server is expected to be enlarged significantly in the near future.
+
+Since the enormous data volume, scraping activities take place every day after working time in the Institute 
+
+
+
+![Scraper Architecture]({{ site.url }}/assets/images/scraper-architecture.png)
 
