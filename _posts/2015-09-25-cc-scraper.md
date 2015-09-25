@@ -22,7 +22,7 @@ As we would like to process the Common Crawl Web Data, we have to get this crawl
 ###Scraper Architecture 
 Scraper architecture consists of several components:
 
-* Main Server
+* Main Server as a scraper habitat
 * Cassandra Storage
 * Common Crawl Storage Servers
 
@@ -36,10 +36,13 @@ Highly concurrent processing of Web Data Crawl goes on. As we have used actor ba
 
 The main server is a habitat for Actors responsible for downloading and processing data, and for Polish language detection.
 
-Actors which are involved in processing:
+####Actors which are involved in processing:
 
-* ActorSystem which plays the role of application CEO 
-* Cassandra Storage
+* *ActorSystem* which plays the role of the application's CEO ![wink]({{site.url }}/assets/images/wink.png) 
+
+It is the core of the scraping system which starts up the scraper, and release resources at the end, by scraping system termination. Data base connection is established and *FileMaster* actor is created. After all, the *StartDownloading* message is sent to the *FileMaster* for further actions.
+
+* *FileMaster* actor is a kind of application's manager, who supervises the tasks of his workers. We can call him a master and its workers as slaves, with accordance to parallel computing nomenclature. 
 * Common Crawl Storage Servers
 
 
