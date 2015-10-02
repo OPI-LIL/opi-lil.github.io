@@ -70,4 +70,6 @@ There are some error handling in the scraper's implementation. Because of using 
 
 ###Summary
 
-We have introduced you to our concept of scraper architecture, based on highly concurrent processing. We have developed an effective and powerful tool for fast data scraping and processing. This scraper can be very easy adjusted to work on different website content. As we use actor-based Akka Framework, concurrency comes naturally. We hope some of the ideas one can find useful and interesting. In the next post we will focus on more technical side of the problem, including Scala source code. Keep in touch! ![wink]({{site.url }}/assets/images/wink.png)
+We have introduced you to our concept of scraper architecture, based on highly concurrent processing. We have developed an effective and powerful tool for fast data scraping and processing. This scraper can be very easy adjusted to work on different website content. As we use actor-based Akka Framework, concurrency comes naturally. We hope some of the ideas one can find useful and interesting. In the next post we will focus on more technical side of the problem, including Scala source code. 
+
+Keep in touch! ![wink]({{site.url }}/assets/images/wink.png)
