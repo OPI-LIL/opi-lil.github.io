@@ -48,7 +48,9 @@ This is the real manager who creates its workers, hires them, and gives them tas
 
 * *FileWorker* is a worker responsible for data processing. This actor is called as *Slave* and is under supervision of his *Master*. There might be a lot of them. In our system we have 48 *Slaves*, what is equal to 3 times the number of CPU cores.
 
-*Slave* performs most of the job, but not all... After he has received *ProcessFile* message from his *Master*, the processing step is initialized. First, the file containing gzipped data is downloaded, and second he iterates over unzipped file stream containing Web Data Crawl, which is about 300 MB raw text, and fetches chunks of plaintext, with special care of headers, and send further to *Bouncer* actors for Polish language detection. Each chunk of text is sent to currently available *Bouncer* actor. After obtaining a response from *Bouncer*, *FileWorker* sends the message to his *Master* with a proper feedback (Failure or Success).
+*Slaves* perform most of the job, but not all... After they have received a *ProcessFile* message from his *Master*, the processing step is initialized. First, the file containing gzipped data is downloaded, and second, the iteration over unzipped file stream containing Web Data Crawl is performed. The average file contains about 300 MB raw text. In the meanwhile of iteration, *Slaves* are fetching chunks of plaintext, with special care of headers, and are sending further to *Bouncer* actors for Polish language detection. Each chunk of text is sent to currently available *Bouncer* actor. After obtaining a response from *Bouncer*, *FileWorker* sends the message to his *Master* with a proper feedback (Failure or Success). And *FileWorker* is ready for the next URL for processing or is terminated by its *Master*.
+
+* *Bouncer* is a worker responsible for data processing. ![wink]({{site.url }}/assets/images/bouncer.png)
 
 
 ![Scraper Architecture]({{ site.url }}/assets/images/scraper-architecture.png)
