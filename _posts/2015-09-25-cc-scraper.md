@@ -50,8 +50,16 @@ This is the real manager who creates its workers, hires them, and gives them tas
 
 *Slaves* perform most of the job, but not all... After they have received a *ProcessFile* message from his *Master*, the processing step is initialized. First, the file containing gzipped data is downloaded, and second, the iteration over unzipped file stream containing Web Data Crawl is performed. The average file contains about 300 MB raw text. In the meanwhile of iteration, *Slaves* are fetching chunks of plaintext, with special care of headers, and are sending further to *Bouncer* actors for Polish language detection. Each chunk of text is sent to currently available *Bouncer* actor. After obtaining a response from *Bouncer*, *FileWorker* sends the message to his *Master* with a proper feedback (Failure or Success). And *FileWorker* is ready for the next URL for processing or is terminated by its *Master*.
 
-* *Bouncer* is a worker responsible for data processing. ![wink]({{site.url }}/assets/images/bouncer.png)
+* *Bouncer* ![wink]({{site.url }}/assets/images/bouncer.png) is an actor whose aim is to detect Polish language and write down proper data to Cassandra storage. Other than Polish content websites are not allowed to come in.
 
+There are many of them for speeding up the processing flow. They all are created by *FileMaster* as actors with router for more efficient handling of message passing. There are is a pool of them and available *Bouncers* appear to handle information processing task. If the number of *Bouncers* is too small, the queue grows up, and *FileWorker* has to wait for available *Bouncer* during its iteration over file. We use 72 *Bouncers*, performed tests have showed the number is sufficient i.e. increasing it we are not beneficial.
+
+####Processing Flow
+Below we present a scheme of the architecture which we have developed. The core of the system is in the middle of the picture, it is Main Server which has been mentioned above. The process starts there every day, and the crontab script fires up the first spark, which after a while changes into branchy flames.
 
 ![Scraper Architecture]({{ site.url }}/assets/images/scraper-architecture.png)
+
+*ActorSystem* revives the application, creates *FileMaster*, which in turn generates its *FileWorkers* and *Bouncers*. *FileMaster* feeds its slaves (*FileWorkers*) with URLs for being processed. Afterwards, *FileWorkers* download gzipped data files from Common Crawl Servers, and process them by sending data chunks for language detection to available *Bouncers*. At the end, websites  which have been recognised as Polish, are dumped into Cassandra Storage, enriching our collection ![smile]({{site.url }}/assets/images/smile.png).
+
+OK! ({{ site.url }}/assets/images/ok.gif)
 
