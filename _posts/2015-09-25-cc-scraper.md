@@ -40,6 +40,12 @@ The main server is a habitat for Actors responsible for downloading and processi
 
 As we process and store documents, we have chosen document-oriented data base, which is well recognised and know for its scalability and high availability without compromising performance. [Apache Cassandra](http://cassandra.apache.org/) has linear scalability and proven fault-tolerance. More over, Apache Cassandra offers the assistance of column indexes, which is useful and makes things easier. Our Cassandra Storage contains only two nodes. But in the near future, we expect to enlarge the cluster substantially, and then we could be really beneficial of using that data model. Now, the storage capacity is around a few terabytes, and the scraped Polish content is in size of hundreds of gigabytes compressed data ([Cassandra offers data compression natively](http://docs.datastax.com/en/cassandra/2.0/cassandra/operations/ops_config_compress_t.html)). 
 
+####Common Crawl Storage Servers
+
+They are servers on which data are stored and publicly available. Sometimes because of some problems (network congestion or other), data scraping is stalled. Such accident is known as we write down the result to data base when we processed file correctly. From that reason, some repetitions are needed.
+
+The Web Data Crawl is available also through [Amazon S3 services](https://aws.amazon.com/datasets/common-crawl-corpus/). It might be useful when we don't have any suitable infrastructure for processing BigData. The cons of that is not entirely for free. You have to pay fee, which might be quite high, especially when you use more processes/resources. On the other hand, you are given the access to the whole data pack, which might be tricky otherwise.
+
 ####Actors which are involved in processing:
 
 * *ActorSystem* which plays the role of the application's CEO ![wink]({{site.url }}/assets/images/wink.png).
