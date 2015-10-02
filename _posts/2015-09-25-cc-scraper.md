@@ -38,7 +38,7 @@ The main server is a habitat for Actors responsible for downloading and processi
 
 ####Actors which are involved in processing:
 
-* *ActorSystem* which plays the role of the application's CEO ![wink]({{site.url }}/assets/images/wink.png) 
+* *ActorSystem* which plays the role of the application's CEO ![wink]({{site.url }}/assets/images/wink.png).
 
 It is the core of the scraping system which starts up the scraper, and release resources at the end, by scraping system termination. Data base connection is established and *FileMaster* actor is created. After all, the *StartDownloading* message is sent to the *FileMaster* for further actions.
 
@@ -61,5 +61,13 @@ Below we present a scheme of the architecture which we have developed. The core 
 
 *ActorSystem* revives the application, creates *FileMaster*, which in turn generates its *FileWorkers* and *Bouncers*. *FileMaster* feeds its slaves (*FileWorkers*) with URLs for being processed. Afterwards, *FileWorkers* download gzipped data files from Common Crawl Servers, and process them by sending data chunks for language detection to available *Bouncers*. At the end, websites  which have been recognised as Polish, are dumped into Cassandra Storage, enriching our collection ![smile]({{site.url }}/assets/images/smile.png).
 
-OK! ({{ site.url }}/assets/images/ok.gif)
+####Error Handling
 
+OK! ![wink]({{site.url }}/assets/images/ok.gif)
+
+But one could ask, what would happen in case of emergency?
+There are some error handling in the scraper's implementation. Because of using Akka Framework, which is really powerful, we have native failure support. In general, actors pass the information (objects) among each other. In case of Failure or Success, they can respond differently to another proper actor. *FileWorker* can try to recover from a failure by 10 retries with time range 10 seconds (in our setup). There can be several reasons why an actor fails: a lack of resources (RAM, HDD, etc.), division by 0, internal OS error, network congestion, whatsoever. One can implement their own [Supervisor Strategy](http://doc.akka.io/docs/akka/snapshot/scala/fault-tolerance.html#Creating_a_Supervisor_Strategy) by overriding a specific method (*supervisorStrategy*). In case of *Bouncers* we use a concept called [Future](http://doc.akka.io/docs/akka/2.0.1/scala/futures.html). This feature is very constructive and useful for our problem solving. It works as follows: *FileWorker* iterates over data file, fetches chunks of plaintext and send them to available *Bouncer* for language detection and don't have to wait for *Bouncer's* response as we use *Future* object as a result of processing. *Future* is an object for retrieving the result of some operation performed by the actor, the result can be taken synchronously (blocking) or asynchronously (non-blocking). In our case, we do it in non-blocking way. When the *Future* result is ready to go, one a of callback functions is performed: *onSuccess* or *onFailure*. Such an approach provides more efficient data processing, which doesn't assume expensive synchronization. *FileWorker* can do the iterations without additional lags, and then use available *Bouncers* more extensively.
+
+###Summary
+
+We have introduced you to our concept of scraper architecture, based on highly concurrent processing. We have developed an effective and powerful tool for fast data scraping and processing. This scraper can be very easy adjusted to work on different website content. As we use actor-based Akka Framework, concurrency comes naturally. We hope some of the ideas one can find useful and interesting.
