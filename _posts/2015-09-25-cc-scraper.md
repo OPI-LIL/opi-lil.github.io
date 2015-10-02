@@ -36,6 +36,10 @@ Highly concurrent processing of Web Data Crawl goes on. As we have used actor ba
 
 The main server is a habitat for Actors responsible for downloading and processing data, and for Polish language detection.
 
+####Cassandra Storage
+
+As we process and store documents, we have chosen document-oriented data base, which is well recognised and know for its scalability and high availability without compromising performance. [Apache Cassandra](http://cassandra.apache.org/) has linear scalability and proven fault-tolerance. More over, Apache Cassandra offers the assistance of column indexes, which is useful and makes things easier. Our Cassandra Storage contains only two nodes. But in the near future, we expect to enlarge the cluster substantially, and then we could be really beneficial of using that data model. Now, the storage capacity is around a few terabytes, and the scraped Polish content is in size of hundreds of gigabytes compressed data ([Cassandra offers data compression natively](http://docs.datastax.com/en/cassandra/2.0/cassandra/operations/ops_config_compress_t.html)). 
+
 ####Actors which are involved in processing:
 
 * *ActorSystem* which plays the role of the application's CEO ![wink]({{site.url }}/assets/images/wink.png).
@@ -70,6 +74,6 @@ There are some error handling in the scraper's implementation. Because of using 
 
 ###Summary
 
-We have introduced you to our concept of scraper architecture, based on highly concurrent processing. We have developed an effective and powerful tool for fast data scraping and processing. This scraper can be very easy adjusted to work on different website content. As we use actor-based Akka Framework, concurrency comes naturally. We hope some of the ideas one can find useful and interesting. In the next post we will focus on more technical side of the problem, including Scala source code. 
+We have introduced you to our concept of scraper architecture, based on highly concurrent processing. We have developed an effective and powerful tool for fast data scraping and processing. This scraper can be very easy adjusted to work on different website content. As we use actor-based Akka Framework, concurrency comes naturally. We hope some of the ideas one can find useful and interesting. In the next post, we will focus on more technical side of the problem, including Scala source code. 
 
 Keep in touch! ![wink]({{site.url }}/assets/images/wink.png)
