@@ -32,7 +32,7 @@ Main Server &minus; it's a core of the system, on which scraper performs its tas
 
 Since the enormous data volume, scraping activities take place every day after working hours in the Institute ![smile]({{site.url }}/assets/images/smile.png) (After scraping actors are launched, the Internet connection quality is much reduced.) Crontab scripts take care about both firing scraping up and turning it down.
 
-Highly concurrent processing of Web Data Crawl goes on. As we have used actor based Akka Framework we got it out of the box.
+Highly concurrent processing of Web Data Crawl goes on. As we have used actor based [Akka Framework](http://akka.io/) we got it out of the box.
 
 The main server is a habitat for Actors responsible for downloading and processing data, and for Polish language detection.
 
