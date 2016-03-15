@@ -8,6 +8,8 @@ tags: [data mining, SVN, neural networks, genetic algorithms]
 
 AAIA'16 Data Mining Challenge is the third data mining competition associated with International Symposium on Advances in Artificial Intelligence and Applications (AAIA'16, https://fedcsis.org/2016/aaia) which is a part of FedCSIS conference series. This time, the task is related to the problem of predicting periods of increased seismic activity which may cause life-threatening accidents in underground coal mines. If you would like to know more about the contest, please visit: https://knowledgepit.fedcsis.org/.
 
+<!--more-->
+
 ##Genetic Algorithm Approach
 
 ####Data normalization
