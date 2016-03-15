@@ -1,0 +1,32 @@
+---
+layout: post
+title: "The Luxembourg BabelNet Workshop"
+description: "The workshop about BabelNet, Babelfy and theirs applications, further research and possibilities"
+category: [NLP]
+tags: [NLP, Text Mining]
+---
+
+Two weeks ago we went The Luxembourg BabelNet Workshop, where had the opputunity to meet Roberto Navigli and make a speech in the First Hemicycle Of the European Parliment. How did it go? Read on!
+
+<-- more -->
+
+The Luxembourg BabelNet Workshop was a technical workshop on BabelNet and Babelfy. The workshop took place over two days. The first day was a technical guided tour. The second day consisted of four case studies of resources.
+Those two extremely interesting resources can be defined as below (citing authors of the systems):
+
+ - BabelNet (http://babelnet.org/) is both a multilingual encyclopedic dictionary, with lexicographic and encyclopedic coverage of terms, and a semantic network which connects concepts and named entities in a very large network of semantic relations, made up of about 14 million entries, called Babel synsets. Each Babel synset represents a given meaning and contains all the synonyms which express that meaning in a range of different languages.
+ - Babelfy (http://babelfy.org/) is a unified, multilingual, graph-based approach to Entity Linking and Word Sense Disambiguation based on a loose identification of candidate meanings coupled with a densest subgraph heuristic which selects high-coherence semantic interpretations.
+
+During the workshop there were planned Lightning Talk sessions. In the two of them we had a pleasure to present our research in three talks:
+
+ - Whose line is it anyway - Automatic multilingual emotion annotation of movie dialogues (Wojciech Stokowiec) [Paper](http://babelnet.org/lux/files/2.%20Stokowiec%20W.%20-%20Whose%20line%20is%20it%20anyway%20-%20Automatic%20multilingual%20emotion%20annotation%20of%20movie%20dialogues.pdf) [Presentation](http://babelnet.org/lux/files/LUX-02.03.16%20-%20BabelNet%20Workshop%20-%20Wojciech%20Stokowiec.pdf)
+ - Assessment of historical figures using BabelNet (Maciej Kowalski and Szymon Roziewski) [Paper](http://babelnet.org/lux/files/3.%20Roziewski%20-%20Assessment%20of%20historical%20figures%20using%20BabelNet.pdf) [Presentation](http://babelnet.org/lux/files/LUX-02.03.16%20-%20BabelNet%20Workshop%20-%20Szymon%20Roziewski.pdf)
+ - Search Results Clustering enriched with BabelNet (Marek Kozłowski and Maciej Kazuła) [Paper](http://babelnet.org/lux/files/6.%20Koz%C5%82owski%20and%20Kazu%C5%82a%20-%20Search%20Results%20Clustering%20enriched%20with%20BabelNet.pdf) [Presentation](http://babelnet.org/lux/files/LUX-03.03.16%20-%20BabelNet%20Workshop%20-%20Marek%20Kozlowski.pdf)
+ 
+More information about the workshop are available [here](http://babelnet.org/lux/).
+
+####Acknowledgements
+I would like to express my gratitude to the team responsible for creating and maintaining the BabelNet eco-system, especially Roberto Navigli.
+
+ 
+
+
