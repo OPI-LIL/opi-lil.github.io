@@ -48,6 +48,6 @@ To avoid under-fitting of SVMs procedure of learning model was repeated 200 time
 
 ##Overall results for our solutions:
 
- 1. SVM, score: 0.9336296, place: 4
+ 1. Ensemble SVMs, score: 0.9336296, place: 4
  2. Neural Networks, score:	0.91279228, place: 26
  3. Genetic Algorithm, score: 0.90544115, place: 28
