@@ -12,7 +12,7 @@ This time we visited allegro.tech meetup. We were presenting Babelnet (http://ba
 
 It consists of at least 14 million elements, called babelnet synsets. Each Babel synset represents meaning and includes a set of synonyms, that express the importance of a wide range of different languages. BabelNet covers more than 270 languages and it has been created in the framework of automatic integration: WordNet, Wikipedia, omegawiki, Wiktionary, WikiData etc. The system is being developed by Universystet Sapienza in Rome, and has various interfaces the access (including JAVA API, HTTP Rest API) . In our presentation, we have shown how you can use BabelNet to improve the grouping of documents (specifically the results of the search on the Internet), analysis of the sentiment of the historical evaluation of emotion movies based on inscriptions, or the labeling texts in order to build a compact, semantic representation of text (also called semantic signature). 
 
-The presentation is available here: {{ site.url }}assets/other/babelnet-allegro.tech.pdf
+The presentation is available here: {{ site.url }}/assets/other/babelnet-allegro.tech.pdf
 
 We are recruting for projects:
 - best anti-plagiarism algorithm
