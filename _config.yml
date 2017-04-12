@@ -1,6 +1,6 @@
 # SITE CONFIGURATION
 baseurl: "" # the subpath of your site, e.g. /blog/
-url: "http://opi-lil.github.io" # the base hostname & protocol for your site
+url: "https://opi-lil.github.io" # the base hostname & protocol for your site
 
 # THEME-SPECIFIC CONFIGURATION
 
