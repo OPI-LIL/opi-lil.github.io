@@ -3,7 +3,7 @@ baseurl: "" # the subpath of your site, e.g. /blog/
 url: "http://opi-lil.github.io" # the base hostname & protocol for your site
 
 # THEME-SPECIFIC CONFIGURATION
-theme:
+theme: jekyll-theme-cayman
   # Meta
   title: Shallow Learning
   avatar: avatar.jpg
@@ -60,6 +60,7 @@ paginate: 5
 paginate_path: "blog/page:num"
 
 # BUILD SETTINGS
+
 
 highlighter: rouge
 sass:
