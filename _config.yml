@@ -5,9 +5,8 @@ url: "https://opi-lil.github.io" # the base hostname & protocol for your site
 # THEME-SPECIFIC CONFIGURATION
 
 # Meta
-theme: jekyll-theme-cayman
 title: Shallow Learning
-description: "Cutting edge NLP research" # used by search engines
+tagline: "Cutting edge NLP research" # used by search engines
 
 
 
@@ -33,6 +32,4 @@ paginate_path: "blog/page:num"
 # BUILD SETTINGS
 
 highlighter: rouge
-sass:
-  sass_dir: _sass
-  style: :compressed
+markdown: kramdown
