@@ -61,7 +61,7 @@ paginate_path: "blog/page:num"
 
 # BUILD SETTINGS
 
-highlighter: pygments
+highlighter: rouge
 sass:
   sass_dir: _sass
   style: :compressed
