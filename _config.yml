@@ -3,54 +3,54 @@ baseurl: "" # the subpath of your site, e.g. /blog/
 url: "http://opi-lil.github.io" # the base hostname & protocol for your site
 
 # THEME-SPECIFIC CONFIGURATION
-theme:
-  # Meta
-  title: Shallow Learning
-  avatar: avatar.jpg
-  gravatar: # email md5 hash
-  description: "Cutting edge NLP research" # used by search engines
 
-  # Header and footer text
-  header_text: >
-     <h3>Natural Language Processing Laboratory</h3>
-     <h4> Cutting edge NLP research </h4>
+# Meta
+title: Shallow Learning
+avatar: avatar.jpg
+gravatar: # email md5 hash
+description: "Cutting edge NLP research" # used by search engines
 
-  footer_text: >
-   Powered by <a href="http://jekyllrb.com">Jekyll</a> with <a href="https://rohanchandra.github.io/project/type/">Type Theme</a>
+# Header and footer text
+header_text: >
+ <h3>Natural Language Processing Laboratory</h3>
+ <h4> Cutting edge NLP research </h4>
 
-  # Icons
-  rss: true
-  email_address: # full email address, e.g. "sam@example.com"
-  behance:
-  bitbucket:
-  dribbble:
-  facebook: "opilil"
-  flickr:
-  github: "opi-lil"
-  google_plus:
-  instagram:
-  linkedin:
-  pinterest:
-  reddit:
-  soundcloud:
-  stack_exchange:  # full URL
-  steam:
-  tumblr:
-  twitter: "opi_lil"
-  wordpress:
-  youtube:
+footer_text: >
+Powered by <a href="http://jekyllrb.com">Jekyll</a> with <a href="https://rohanchandra.github.io/project/type/">Type Theme</a>
 
-  # Scripts
-  google_analytics: "UA-61947369-1" # tracking id, e.g. "UA-000000-01"
-  disqus_shortname:
+# Icons
+rss: true
+email_address: # full email address, e.g. "sam@example.com"
+behance:
+bitbucket:
+dribbble:
+facebook: "opilil"
+flickr:
+github: "opi-lil"
+google_plus:
+instagram:
+linkedin:
+pinterest:
+reddit:
+soundcloud:
+stack_exchange:  # full URL
+steam:
+tumblr:
+twitter: "opi_lil"
+wordpress:
+youtube:
 
-  # Localization strings
-  str_follow_on: "Follow on"
-  str_rss_follow: "Follow RSS feed"
-  str_email: "Email"
-  str_next: "Next"
-  str_prev: "Prev"
-  str_continue_reading: "Continue reading"
+# Scripts
+google_analytics: "UA-61947369-1" # tracking id, e.g. "UA-000000-01"
+disqus_shortname:
+
+# Localization strings
+str_follow_on: "Follow on"
+str_rss_follow: "Follow RSS feed"
+str_email: "Email"
+str_next: "Next"
+str_prev: "Prev"
+str_continue_reading: "Continue reading"
 
   # Colors, typography and padding
   # Open the "_sass > base" folder, and open "_variables.scss"
