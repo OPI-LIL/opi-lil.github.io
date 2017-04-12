@@ -5,40 +5,11 @@ url: "http://opi-lil.github.io" # the base hostname & protocol for your site
 # THEME-SPECIFIC CONFIGURATION
 
 # Meta
+theme: jekyll-theme-cayman
 title: Shallow Learning
-avatar: avatar.jpg
-gravatar: # email md5 hash
 description: "Cutting edge NLP research" # used by search engines
 
-# Header and footer text
-header_text: >
- <h3>Natural Language Processing Laboratory</h3>
- <h4> Cutting edge NLP research </h4>
 
-footer_text: >
-Powered by <a href="http://jekyllrb.com">Jekyll</a> with <a href="https://rohanchandra.github.io/project/type/">Type Theme</a>
-
-# Icons
-rss: true
-email_address: # full email address, e.g. "sam@example.com"
-behance:
-bitbucket:
-dribbble:
-facebook: "opilil"
-flickr:
-github: "opi-lil"
-google_plus:
-instagram:
-linkedin:
-pinterest:
-reddit:
-soundcloud:
-stack_exchange:  # full URL
-steam:
-tumblr:
-twitter: "opi_lil"
-wordpress:
-youtube:
 
 # Scripts
 google_analytics: "UA-61947369-1" # tracking id, e.g. "UA-000000-01"
@@ -60,7 +31,6 @@ paginate: 5
 paginate_path: "blog/page:num"
 
 # BUILD SETTINGS
-theme: jekyll-theme-cayman
 
 highlighter: rouge
 sass:
