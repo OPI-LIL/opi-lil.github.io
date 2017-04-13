@@ -6,7 +6,7 @@ category: [Working Class Haters]
 tags: [Working Class Haters, Social Simulation Conference 2016, Emotion Detection, Sentiment Analysis]
 ---
 
-During Social Simulation Conference 2016 (taking place in Rome, 20-23 September) we presented poster regarding our research
+During Statistical Language and Speech Processing Conference 2016 (taking place in Pilsen, 11-12 October 2016) we presented poster regarding our research
 on on the topic of automatic detection of users producing large amount of emotion evoking content - trolls - using statistical and network features, without resorting to standard sentiment analysis approach - with addition of initial alalysis of Engliesh language based source - [hltv.org](http://www.hltv.org) website that hosts news regarding Counter Strike: Global Offensive. Discussion on that website are also highly polarized - as CS:GO is team based e-sports - and well structurized. We have found that our algorithm - build on Polish political content - works very well in this enviromant with no changes to its core.
 
 <!--more-->
