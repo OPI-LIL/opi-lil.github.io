@@ -1,4 +1,6 @@
---- layout: default ---
+--- 
+layout: default 
+---
 
 <div class="home">
 
@@ -21,7 +23,7 @@
             <div class="excerpt">
                 {{ post.content | split: '
                 <!--more-->' | first}}
-                <a class="button" href="{{ post.url | prepend: site.baseurl }}">{{ site.theme.str_continue_reading }}</a>
+                <a class="button" href="{{ post.url | prepend: site.baseurl }}">Read more...</a>
             </div>
 
         </div>
