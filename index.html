@@ -20,11 +20,10 @@ layout: default
                 <p class="meta">{{ post.date | date: "%B %-d, %Y" }}</p>
             </header>
 
-            <div class="excerpt">
-                {{ post.content | split: '
-                <!--more-->' | first}}
-                <a class="button" href="{{ post.url | prepend: site.baseurl }}">Read more...</a>
-            </div>
+            <div class="excerpt"> 
+                {{ post.content | split: '<!--more-->' | first}} 
+                <a class="button" href="{{ post.url | prepend: site.baseurl }}">{{ site.theme.str_continue_reading }}</a> 
+              </div> 
 
         </div>
         {% endfor %}
