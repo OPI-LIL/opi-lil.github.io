@@ -19,4 +19,4 @@ A manual analysis was used to find discriminating features that could help to se
 ## Full paper
 [Available on ResearchGate](https://www.researchgate.net/publication/311674886_Working_class_haters_Detecting_time_patterns_in_negative_speech_in_Polish_political_forums)
 
-Email us: lil@opi.org.pl
+Email us: dks@opi.org.pl
