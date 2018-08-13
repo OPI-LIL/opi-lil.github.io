@@ -21,4 +21,4 @@ We are recruting for projects:
 - semantic search engines
 - Polish Central Scientific Bibliography (Centralna Polska Bibliografia Naukowa)
 
-Email us: lil@opi.org.pl
+Email us: dks@opi.org.pl
