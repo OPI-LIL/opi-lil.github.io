@@ -25,4 +25,4 @@ A manual analysis was used to find discriminating features that could help to se
 #### Additional information
 SLSP'2016 conference costs were paid as a part of researcher PhD Studies at Warsaw University of Technology, Faculty of Mathematics and Information Science.
 
-Email us: lil@opi.org.pl
+Email us: dks@opi.org.pl
