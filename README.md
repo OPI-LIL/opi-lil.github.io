@@ -9,4 +9,4 @@ Natural Language Processing Laboratory fulfills assignments connected with natur
 
 ## Site
 
-[LIL OPI](http://www.opi.org.pl/en/Natural-Language-Processing-Lab.html)
+[LIL OPI](https://www.opi.org.pl/en/Natural-Language-Processing-Laboratory.html)
